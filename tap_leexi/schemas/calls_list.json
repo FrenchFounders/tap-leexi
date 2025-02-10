@@ -1,0 +1,425 @@
+{
+    "type": "object",
+    "properties": {
+      "uuid": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "source": {
+        "type": "string"
+      },
+      "source_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "created_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updated_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "performed_at": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "locale": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "duration": {
+        "type": [
+          "number",
+          "null"
+        ]
+      },
+      "direction": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "enum": [
+          "inbound",
+          "outbound",
+          null
+        ]
+      },
+      "is_video": {
+        "type": "boolean"
+      },
+      "visible": {
+        "type": "boolean"
+      },
+      "recording_url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "uri"
+      },
+      "transcript_url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "uri"
+      },
+      "leexi_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "video_archived_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "audio_archived_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "transcript_archived_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "completions_archived_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "summary": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "deal": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "uuid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "crm": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "crm_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "meeting_event": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "organizer": {
+            "type": "object",
+            "properties": {
+              "email": {
+                "type": "string",
+                "format": "email"
+              }
+            }
+          },
+          "attendees": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                }
+              }
+            }
+          },
+          "meeting_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri"
+          },
+          "meeting_provider": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "internal": {
+            "type": "boolean"
+          },
+          "direction": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "start_time": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "end_time": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
+      "feedbacks": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "text": {
+              "type": "string"
+            },
+            "user": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email"
+                },
+                "active": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "owner": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "participating_users": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "name": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "active": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "customer_phone_numbers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "customer_email_addresses": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "email"
+        }
+      },
+      "speakers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "index": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "is_user": {
+              "type": "boolean"
+            },
+            "phone_number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "email_address": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "email"
+            }
+          }
+        }
+      },
+      "title": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "description": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+  
+      "prompts": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "category": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "completions": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      },
+  
+      "scorecards": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": "object"
+        }
+      },
+      "tags": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+}
+  
