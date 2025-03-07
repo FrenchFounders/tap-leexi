@@ -145,7 +145,10 @@
           ]
         },
         "organizer": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
             "email": {
               "type": "string",
