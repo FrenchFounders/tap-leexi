@@ -42,6 +42,7 @@ class CallsListStream(LeexiStream):
         params = {
             "items": 100,
             "order": "updated_at asc",
+            "with_simple_transcript": "true"
         }
         replication_date = self.get_starting_replication_key_value(context)
         if replication_date:
