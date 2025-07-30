@@ -45,8 +45,9 @@ class CallsListStream(LeexiStream):
         }
         replication_date = self.get_starting_replication_key_value(context)
         if replication_date:
+            params["date_filter"] = "updated_at"
             params["from"] = replication_date
-        
+
         if next_page_token:
             params["page"] = next_page_token
         return params
